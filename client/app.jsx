@@ -1,6 +1,7 @@
 import React from 'react';
+// It is recommended to call injectTapEventPlugin() just before you call ReactDOM.render()
+//import injectTapEventPlugin from 'react-tap-event-plugin';
 import ReactDOM from 'react-dom';
-import injectTapEventPlugin from 'react-tap-event-plugin';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import AppBar from 'material-ui/AppBar';
@@ -15,7 +16,7 @@ require('./css/main.css');
 require('./css/cssreset.css');
 
 // Needed for onTouchTap
-injectTapEventPlugin();
+//injectTapEventPlugin();
 
 const Logged = (props) => (
 	<IconMenu
@@ -66,7 +67,7 @@ class RealTimeClock extends React.Component {
 			<MuiThemeProvider muiTheme={getMuiTheme()}>
 				<div>
 					<AppBar
-						title='Title'
+						title='სათაური'
 						iconElementRight={<IconButton><NavigationClose /></IconButton>}
 						iconElementLeft={<Logged />}
 					/>

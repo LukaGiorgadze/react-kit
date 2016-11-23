@@ -19,14 +19,14 @@ loaders.push({
 
 // Export Webpack Config
 module.exports = {
-	devtool: config.environment === 'development' ? 'eval' : 'source-map',
+	devtool: config.environment === 'development' ? 'eval' : 'hidden-source-map',
 	entry: [
 		'webpack-hot-middleware/client',
 		Path.join(__dirname, 'client', config.clientMain)
 	],
 	output: {
 		path: Path.join(__dirname, config.publicHtml),
-		publicPath: config.environment === 'development' ? config.host + (config.port.length ? ':' + config.port : '') : '/',
+		publicPath: '/',
 		filename: '[hash].js'
 	},
 	resolve: {
